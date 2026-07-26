@@ -6,6 +6,7 @@ Homebrew tap for [MacWash](https://github.com/toolka/MacWash) — macOS system c
 
 ```bash
 brew tap toolka/macwash
+brew trust toolka/macwash
 brew install macwash
 ```
 
