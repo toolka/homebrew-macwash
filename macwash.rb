@@ -6,6 +6,9 @@ class Macwash < Formula
   license "MIT"
   version "1.0.0"
 
+  # Pure shell — no compilation needed, no Xcode CLT required
+  bottle :unneeded
+
   def install
     # Install main binary
     bin.install "macwash"
