@@ -6,23 +6,17 @@ class Macwash < Formula
   license "MIT"
   version "1.0.0"
 
-  # Pure shell — no compilation needed, no Xcode CLT required
-  bottle :unneeded
+  # Pure bash — no compilation needed
+  depends_on :macos
 
   def install
-    # Install main binary
     bin.install "macwash"
-
-    # Install lib and bin directories
     (prefix/"lib").install Dir["lib/*"]
     (prefix/"bin").install Dir["bin/*"]
-
-    # Make all bin scripts executable
     chmod 0755, Dir["#{prefix}/bin/*"]
   end
 
   def post_install
-    # Point the installed macwash binary to its lib/bin location
     inreplace bin/"macwash", /^SCRIPT_DIR=.*/, "SCRIPT_DIR=\"#{prefix}\""
   end
 
