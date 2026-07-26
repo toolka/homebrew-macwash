@@ -6,17 +6,11 @@ class Macwash < Formula
   license "MIT"
   version "1.0.0"
 
-  # Pure bash — no compilation needed
-  depends_on :macos
-
   def install
     bin.install "macwash"
     (prefix/"lib").install Dir["lib/*"]
     (prefix/"bin").install Dir["bin/*"]
     chmod 0755, Dir["#{prefix}/bin/*"]
-  end
-
-  def post_install
     inreplace bin/"macwash", /^SCRIPT_DIR=.*/, "SCRIPT_DIR=\"#{prefix}\""
   end
 
