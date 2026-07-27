@@ -1,10 +1,10 @@
 class Macwash < Formula
   desc "Clean, optimize and speed up your Mac. Free and open source macOS cleaner CLI"
   homepage "https://github.com/toolka/MacWash"
-  url "https://github.com/toolka/MacWash/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "5179e13b1611bc1f115bea1e7780ff97f2b00e540101a484aa614ca6c59cccee"
+  url "https://github.com/toolka/MacWash/archive/refs/tags/v1.0.4.tar.gz"
+  sha256 "2645fbd4597eb8bcbf040123a0945317e959199de7fea15241e3746f9596f63f"
   license "MIT"
-  version "1.0.3"
+  version "1.0.4"
 
   def install
     bin.install "macwash"
